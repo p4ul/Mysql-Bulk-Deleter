@@ -9,12 +9,21 @@ If the answer is yes then this may be the solution for you.
 _Please note this has only been tested in Ubuntu_
 
 ## What this tool does ##
-Deletes rows from mysql in batches, it has small and big sleeps so that anything accessing the database can 
-still hopefully run as normal. Ideal for leaving overnight when you have the parameters tuned correctly and 
-millions of rows to delete on a  prod system.
+* Deletes rows from mysql in batches, it has small and big sleeps so that anything accessing the database can still hopefully run as normal. 
+* Ideal for leaving overnight when you have the parameters tuned correctly and millions of rows to delete on a  prod system.
+
+## Features ##
+### nice cli interface including: ###
+* progress bar
+* estimated time remaining
+* row counts
+
+## screenshot ##
+![Screenshot](https://raw.github.com/p4ul/Mysql-Bulk-Deleter/master/screenshot.png "MBD in action")
 
 ## What this tool does not ##
 * monitor mysql performance, load average etc 
+* sanity check your SQL's
 
 ## To use this tool ##
 1. copy template.job to a new file i.e. good.job

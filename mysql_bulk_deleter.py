@@ -62,8 +62,8 @@ def report_progress(stdscr, percent, rowsDeleted, message, avgTime, maxDeleteRow
     #the whitespaces in this string are to clear out old text
     stdscr.addstr(1, 0, "Average Query Time: {0}                              ".format(avgTime))
     stdscr.addstr(2, 0, "Total progress: [{1:100}] {0}%".format(round(percent, 2), "#" * int(percent)))
-    stdscr.addstr(3, 0, "Rows Deleted: {0} ".format(rowsDeleted))
-    stdscr.addstr(4, 0, "Status: {0}                          ".format(message))
+    stdscr.addstr(3, 0, "Rows Deleted: {0}                                               ".format(rowsDeleted))
+    stdscr.addstr(4, 0, "Status: {0}                                                     ".format(message))
     stdscr.addstr(5, 0, "")
     stdscr.addstr(6, 0, "total to be deleted {0}  ".format(maxDeleteRows))
     stdscr.addstr(7, 0, "Database Delete Time Remaining: {0}            ".format(nice_date(remainingTime)))
