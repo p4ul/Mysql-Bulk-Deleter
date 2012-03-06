@@ -14,7 +14,6 @@ sqlQueryRecon   = "SELECT max(id) as max_id, count(1) as cnt FROM poll where mod
 sqlQueryDelete	= "DELETE LOW_PRIORITY FROM poll where id < %s"
 
 
-
 # database details
 hostName 		= 'localhost'
 databaseName 	= 'name'
