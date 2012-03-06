@@ -1,0 +1,36 @@
+#
+# config file
+#
+
+
+#
+# queries to run
+#
+
+#this should return two values in order, id and count
+sqlQueryRecon   = "SELECT max(id) as max_id, count(1) as cnt FROM poll where modified_date < now() - interval 5.2 month limit 1"
+
+#limit will be appened to this based on rowLimit below
+sqlQueryDelete	= "DELETE LOW_PRIORITY FROM poll where id < %s"
+
+
+
+# database details
+hostName 		= 'localhost'
+databaseName 	= 'name'
+databaseUser 	= 'root'
+databasePass 	= 'pass'
+
+# maximum number of rows to delete in given session
+maxDeleteRows 	= 50000
+
+# rows to delete per batch
+rowLimit 		= '1000'
+
+# number of rows to delete before triggering wait
+smallTimeoutAfter = 6000
+bigTimeoutAfter   = 52000
+
+# seconds to wait when each wait is hit
+smallTimeoutSecs  = 2
+bigTimeoutSecs    = 15
