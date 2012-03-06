@@ -7,7 +7,7 @@ If the answer is yes then this may be the solution for you.
 
 _Please note this has only been tested in Ubuntu_
 
-## To use this tool ## 
+## To use this tool ##
 1. copy template.job to a new file i.e. good.job
 2. fill in database connection details
 3. fill in sqlQueryRecon with SQL to find the minimum id of the data you want to keep
