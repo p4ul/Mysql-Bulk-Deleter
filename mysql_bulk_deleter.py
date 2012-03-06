@@ -80,7 +80,7 @@ def bulk_delete(stdscr):
         seq = []
         
         with Timer():
-            while rowsDeleted < maxDeleteRows :
+            while rowsDeleted < (maxDeleteRows - 1) :
                 start = time.time()
                 cursor.execute(config['sqlQueryDelete'] + " limit " + rowLimit,(maxVal))
                 timeTaken = round(time.time() - start,4)
@@ -122,10 +122,12 @@ def bulk_delete(stdscr):
                 time.sleep(wait)
                             
             
-        print "total Rows deleted : %s " % rowsDeleted
+        
         
         cursor.close()
         conn.close()
+	curses.endwin()
+	print "total Rows deleted : %s " % rowsDeleted
         print "finished"
     except mdb.Error, e:
         print "Error %d: %s" % (e.args[0],e.args[1])
