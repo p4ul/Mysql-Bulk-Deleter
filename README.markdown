@@ -21,6 +21,11 @@ _Please note this has only been tested in Ubuntu_
 ## screenshot ##
 ![Screenshot](https://raw.github.com/p4ul/Mysql-Bulk-Deleter/master/screenshot.png "MBD in action")
 
+## requirements ##
+### python modules ###
+* configobj `easy_install configobj`
+* mysqldb   `sudo apt-get install python-mysqldb`
+
 ## What this tool does not ##
 * monitor mysql performance, load average etc 
 * sanity check your SQL's
